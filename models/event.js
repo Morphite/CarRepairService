@@ -21,7 +21,7 @@ const EventSchema = mongoose.Schema({
     end: {
         type: String
     },
-    rekisteriNro: {
+    regNumber: {
         type: String
     },
     description: {

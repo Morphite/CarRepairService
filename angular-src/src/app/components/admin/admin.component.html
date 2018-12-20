@@ -190,7 +190,7 @@
         <td class="desc">{{event.title}}</td>
         <td class="desc">{{event.start}}</td>
         <td class="desc">{{event.end}}</td>
-        <td class="desc">{{event.rekisteriNro}}</td>
+        <td class="desc">{{event.regNumber}}</td>
         <td class="table-text">{{event.description}}</td>
         <td class="table-last">
           <button (click)="deleteEvent(event)" class="btn btn-danger btn-sm">Отменить</button>
@@ -219,7 +219,7 @@
         <td class="desc">{{event.title}}</td>
         <td class="desc">{{event.start}}</td>
         <td class="desc">{{event.end}}</td>
-        <td class="desc">{{event.rekisteriNro}}</td>
+        <td class="desc">{{event.regNumber}}</td>
         <td class="table-text">{{event.description}}</td>
         <td class="table-last"><button (click)="(deleteEvent(event))" class="btn btn-danger btn-sm">Отклонить</button>
           <button (click)="confirmEvent(event)" class="btn btn-success btn-sm" *ngIf="!event.confirm">Принять</button></td>
@@ -247,7 +247,7 @@
         <td class="desc">{{event.title}}</td>
         <td class="desc">{{event.start}}</td>
         <td class="desc">{{event.end}}</td>
-        <td class="desc">{{event.rekisteriNro}}</td>
+        <td class="desc">{{event.regNumber}}</td>
         <td class="table-text">{{event.description}}</td>
         <td class="table-last"><button (click)="(deleteEvent(event))" class="btn btn-danger btn-sm">Отменить</button>
           <button (click)="confirmEvent(event)" class="btn btn-success btn-sm" *ngIf="!event.confirm">Принять</button></td>
