@@ -41,8 +41,8 @@ export class ProfileComponent implements OnInit {
     this.authService.getAllEvents(this.authService.getUser().id, this.curuser.location).subscribe(events => {
       this.events = events;
       this.events.forEach(event => {
-        event.start = moment(event.start).format('DD.MM.YYYY [klo] HH:mm');
-        event.end = moment(event.end).format('DD.MM.YYYY [klo] HH:mm');
+        event.start = moment(event.start).format('DD.MM.YYYY [в] HH:mm');
+        event.end = moment(event.end).format('DD.MM.YYYY [в] HH:mm');
       });
     })
   }

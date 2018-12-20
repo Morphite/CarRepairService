@@ -78,8 +78,8 @@ export class AdminComponent implements OnInit {
       var eventit = events;
       
       eventit.forEach(event => {
-        event.start = moment(event.start).format('DD.MM.YYYY [klo] HH:mm');
-        event.end = moment(event.end).format('DD.MM.YYYY [klo] HH:mm');
+        event.start = moment(event.start).format('DD.MM.YYYY [в] HH:mm');
+        event.end = moment(event.end).format('DD.MM.YYYY [в] HH:mm');
         
         this.authService.getUserById(event).subscribe(user => {
           if (user != null && event.confirm == false) {
@@ -137,8 +137,8 @@ export class AdminComponent implements OnInit {
     this.authService.getEvents(start, end, userId, this.curuser.location, admin).subscribe(events => {
       this.events = events
       this.events.forEach(event => {
-        event.start = moment(event.start).format('DD.MM.YYYY [klo] HH:mm');
-        event.end = moment(event.end).format('DD.MM.YYYY [klo] HH:mm');
+        event.start = moment(event.start).format('DD.MM.YYYY [в] HH:mm');
+        event.end = moment(event.end).format('DD.MM.YYYY [в] HH:mm');
         this.authService.getUserById(event).subscribe(user => {
           if (user != null) {
             this.user = user

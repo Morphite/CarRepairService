@@ -265,22 +265,22 @@ export class DashboardComponent implements OnInit {
 
     switch (this.title) {
 
-      case 'масло': {
+      case 'oil': {
         this.color = '#3a87ad';
         this.duration = 1;
         break;
       }
-      case 'шины': {
+      case 'tires': {
         this.color = '#009933';
         this.duration = 1;
         break;
       }
-      case 'обслуживание': {
+      case 'maintenance': {
         this.color = '#cc0000';
         this.duration = 4;
         break;
       }
-      case 'ремонт': {
+      case 'repair': {
         this.color = '#999922';
         this.duration = 8;
         break;
