@@ -1,0 +1,79 @@
+<div class="calendar-container">
+
+  <div class="calendar-div">
+    <angular2-fullcalendar [options]="options" id="myCalendar"></angular2-fullcalendar>
+  </div>
+
+  <div class="eventinfo">
+    <h1>Бронирование</h1>
+
+    <form class="login-form">
+
+      <div *ngIf="admin" class="form-group">
+        <label>Клиент</label><br>
+
+        <div *ngIf="!userSelectMenu; else userMenu">
+          <input class="form-control" id="userselection" [(ngModel)]="eventUsername.firstname + ' ' + eventUsername.lastname" name="eventUsername" >
+          <div id="pickHelper">
+            <p (click)="userSelectionClick()">Выберете клиента</p>
+          </div>
+        </div>
+
+        <ng-template #userMenu>
+          <input class="form-control" id="search-boxi" (keyup)="searchTerm$.next($event.target.value)" autocomplete="off" placeholder="Поиск по имени" />
+          <div class="search-box">
+            <option class="form-control hover" *ngFor="let user of users" (click)="userSelectionClick(user);">
+              {{ user.lastname }} {{user.firstname}}
+            </option>
+          </div>
+        </ng-template>
+      </div>
+
+      <div class="form-group">
+        <label>Услуги</label>
+        <select type="text" class="form-control"  [(ngModel)]="title" (ngModelChange)="onTitleChange()" name="title" required>
+                    <option value="öljynvaihto" style="background-color: #3a87ad; color:#ffffff">Замена масла</option>
+                    <option value="renkaidenvaihto" style="background-color: #009933; color:#ffffff">Замена шин</option>
+                    <option value="huolto" style="background-color: #cc0000; color:#ffffff">Техническое обслуживание</option>
+                    <option value="korjaus" style="background-color: #999922; color:#ffffff">Ремонт</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Время начала</label>
+        <input type="datetime-local" [disabled]="userStatus" step="1800" class="form-control" [(ngModel)]="start" name="start" required>
+      </div>
+
+      <div class="form-group">
+        <label>Время окончания</label>
+        <input type="datetime-local" [disabled]="userStatus" step="1800" class="form-control" [(ngModel)]="end" name="end" required>
+      </div>
+
+      <div class="form-group">
+        <label>Рег. номер</label>
+        <input class="form-control" [(ngModel)]="rekisteriNro" name="rekisteriNro" required/>
+      </div>
+
+      <div class="form-group">
+        <label>Доп. инфо</label>
+        <textarea class="form-control" rows="2" [(ngModel)]="description" name="description"> </textarea>
+      </div>
+
+      <div *ngIf="admin; else Addmin">
+        <input type="submit" (click)="onEventSubmit()" class="btn btn-primary" value="Сделать заказ">
+        <input type="submit" (click)="onConfirmClick()" *ngIf="!confirm && admin" class="btn btn-primary" value="Принять">
+        <input type="submit" (click)="onDeleteClick()" *ngIf="admin" class="btn btn-primary" value="Отменить">
+      </div>
+      
+      <ng-template #Addmin>
+        <input type="submit" (click)="onEventSubmit()" class="btn btn-primary" value="Бронировать">
+      </ng-template>
+
+    </form>
+
+  </div>
+
+  <br>
+  <a class="helplink" [routerLink]="['/help']">Помощь по бронированию</a>
+
+</div>

@@ -1,0 +1,188 @@
+.checkbox {
+  width: 1.5em;
+  height: auto;
+}
+
+.right {
+  width: 40%;
+  position: relative;
+  float: right;
+}
+
+.button-right {
+  float: right;
+}
+
+.form {
+  float: right;
+  margin-right: 16px;
+}
+
+textarea {
+  resize: none;
+  scroll-behavior: smooth;
+}
+
+#inputAdd {
+  width: 65%;
+}
+
+#input {
+  padding-right: 16px;
+}
+
+#search-box {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+#formSearch {
+  width: 40%;
+  float: right;
+}
+
+.form-group {
+  width: auto;
+}
+
+.fixed {
+  width: 50%;
+  position: relative;
+  float: left;
+}
+
+.top {
+  width: 100%;
+  position: relative;
+}
+
+.hover {
+  border-radius: 0px;
+  border-top: 0px;
+}
+
+.hover:hover {
+  background-color: #f8f5f0
+}
+
+.desc {
+  width: auto;
+}
+
+.table-text {
+  width: 15em;
+}
+
+.table-name {
+  width: 6%;
+}
+
+.table-last {
+  width: 160px;
+}
+
+.form-control {
+  width: 50%;
+}
+
+.search-box {
+  position: absolute;
+  width: 50%;
+  z-index: 10;
+}
+
+.col-md-4 {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.panel-primary {
+  width: 40%;
+  height: 5%;
+  float: left;
+}
+
+.panel-success {
+  float: right;
+  width: 100%;
+  height: 5%;
+}
+
+.btn-group-vertical {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 0px;
+  display: block;
+  width: 40%;
+}
+
+.btn {
+  border-radius: 0px;
+}
+
+.btn-primary {
+  display: inline-block;
+  border-radius: 6px;
+  margin: auto;
+  max-width: 160px;
+}
+
+.btn-sm {
+  margin-bottom: 5px;
+  border-radius: 3px;
+  float: right;
+  margin-right: 0.5em;
+}
+
+.btn-xs {
+  margin-left: 0.6em;
+  min-width: 4.5em;
+  float: right;
+  border-radius: 3px;
+}
+
+.btn-default {
+  margin-bottom: 10px;
+}
+
+.btn-group-vertical>.btn:not(:first-child):not(:last-child) {
+  border-radius: 6px;
+}
+
+.btn-group-vertical>.btn:first-child:not(:last-child) {
+  border-radius: 6px;
+}
+
+.btn-group-vertical>.btn:last-child:not(:first-child) {
+  border-radius: 6px;
+}
+
+.form-horizontal {
+  padding-top: 0em;
+  width: 100%;
+  float: left;
+}
+
+.table-container {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  margin-top: 2em;
+}
+
+.control-label {
+  text-align: left;
+}
+
+.table-hover {
+  position: relative;
+  margin-top: 10em;
+}
+
+.table-hover:hover {
+  cursor: pointer;
+}
+
+.control-label {
+  text-align: left;
+}

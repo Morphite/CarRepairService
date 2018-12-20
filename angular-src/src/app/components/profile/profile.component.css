@@ -1,0 +1,27 @@
+.user-block {
+  float: left;
+}
+
+.changePw-block {
+  float: right;
+}
+
+.profile-block {
+  display: inline-block;
+  margin: 1em;
+  width: 30%;
+  vertical-align: middle;
+}
+
+.table-hover {
+  margin-top: 5em;
+}
+
+.form-alert {
+  display: inline-block;
+  position: relative;
+  margin-left: 1em;
+  margin-bottom: 0;
+  height: 100%;
+  color: red;
+}

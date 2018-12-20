@@ -1,0 +1,28 @@
+<section class="BG">
+    <div class="jumborton text-center">
+        <h1>SkyService</h1>
+        <p class="lead">Добро пожаловать на сайт автосервиса SkyService</p>
+        <p *ngIf="!authService.loggedIn()">Вы можете продолжить, зарегистрировавшись или войдя в систему</p>
+        <div>
+            <a *ngIf="!authService.loggedIn()" class="btn btn-primary" [routerLink]="['/register']">Регистрация</a>
+            <a *ngIf="!authService.loggedIn()" class="btn btn-default" [routerLink]="['/login']">Войти</a>
+        </div>
+    </div>
+</section>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Большой опыт</h2>
+        <p>У нас большой профессиональный опыт в области промышленности</p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Онлайн бронирование</h2>
+        <p>Зарегистрируйтесь на сайте и забронируйте время на ремонт бесплатно или свяжитесь с нами по электронной почте</p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Гарантии</h2>
+        <p>Предоставляем гарантии на ремонтные работы</p>
+    </div>
+</div>
