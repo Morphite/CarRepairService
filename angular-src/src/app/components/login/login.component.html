@@ -7,8 +7,8 @@
       <div class="form-group form-solo" [ngClass]="{'has-error': loginForm.get('login').invalid && loginForm.get('login').touched}">
         <label>Выберете желаемую мастерскую</label>
         <select type="text" class="form-control" formControlName="location" name="location">
-                    <option value="keskusta">Центральная</option>
-                    <option value="perala" >Вторичная</option>
+                    <option value="first">Центральная</option>
+                    <option value="second" >Вторичная</option>
                 </select>
       </div>
 

@@ -15,8 +15,6 @@ router.post('/register', (req, res, next) => {
     lastname: req.body.lastname,
     email: req.body.email,
     phone: req.body.phone,
-    address: req.body.address,
-    area: req.body.area,
     city: req.body.city,
     username: req.body.username,
     password: req.body.password,
@@ -42,8 +40,8 @@ router.post('/register', (req, res, next) => {
     subject: 'SkyService', // Subject line
     text: '', // plain text body
     html: `<b>Спасибо за регистрацию </br></br>
-                          ваш логин on ${newUser.username}</br>
-                          ваш пароль ${newUser.password}</b></br></br>
+                          ваш логин "${newUser.username}"</br>
+                          ваш пароль "${newUser.password}"</b></br></br>
                           Измените свой профиль пароля, как только вы войдете в систему.
                           ` // html body
   }

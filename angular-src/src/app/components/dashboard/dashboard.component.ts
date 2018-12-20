@@ -113,7 +113,7 @@ export class DashboardComponent implements OnInit {
         
 
         $.ajax({
-          url: 'http://localhost:8081' //'http://localhost:8081/' for local deployement empty for heroku.
+          url: 'http://localhost:8081' //'http://localhost:8081/' for local deployement.
           + start + "/" + end + "/" + userId + "/"+ curuser.location + "/" + true,
           dataType: 'json',
           success: function(response) {
@@ -265,22 +265,22 @@ export class DashboardComponent implements OnInit {
 
     switch (this.title) {
 
-      case 'öljynvaihto': {
+      case 'масло': {
         this.color = '#3a87ad';
         this.duration = 1;
         break;
       }
-      case 'renkaidenvaihto': {
+      case 'шины': {
         this.color = '#009933';
         this.duration = 1;
         break;
       }
-      case 'huolto': {
+      case 'обслуживание': {
         this.color = '#cc0000';
         this.duration = 4;
         break;
       }
-      case 'korjaus': {
+      case 'ремонт': {
         this.color = '#999922';
         this.duration = 8;
         break;
