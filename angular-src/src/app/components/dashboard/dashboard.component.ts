@@ -113,8 +113,7 @@ export class DashboardComponent implements OnInit {
         
 
         $.ajax({
-          url: 'http://localhost:8081' //'http://localhost:8081/' for local deployement.
-          + start + "/" + end + "/" + userId + "/"+ curuser.location + "/" + true,
+          url: 'http://localhost:8081' + start + "/" + end + "/" + userId + "/"+ curuser.location + "/" + true,
           dataType: 'json',
           success: function(response) {
             if (!curuser.admin) {

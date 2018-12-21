@@ -73,6 +73,17 @@ export class AdminComponent implements OnInit {
     this.selectedUser = null;
   }
 
+  deleteUser(): void{
+    this.authService.deleteUser(this.selectedUser._id).subscribe( data => {
+      if(data.success){
+        this.flashMessage.show("Пользователь удален", {cssClass: 'alert-success', timeout: 3000})
+      } else {
+        this.flashMessage.show('Упс! Что-то пошло не так', { cssClass: 'alert-danger', timeout: 3000 });
+      }
+    });
+    this.selectedUser = null;
+  }
+
   onEvents() {
     this.authService.getAllEvents(this.selectedUser._id, this.curuser.location).subscribe(events => {
       var eventit = events;

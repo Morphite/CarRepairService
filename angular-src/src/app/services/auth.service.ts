@@ -19,7 +19,7 @@ export class AuthService {
   authHeaderi: any;
 
   constructor(private http: Http) {
-    this.nodeUrl = 'http://localhost:8081/'; //'http://localhost:8081/' for local deployement empty for heroku.
+    this.nodeUrl = 'http://localhost:8081/';
 
     if (this.user == null) {
       this.user = JSON.parse(localStorage.getItem('user'));
@@ -127,6 +127,11 @@ export class AuthService {
   update(user: User): Observable<User> {
     return this.http.put(this.nodeUrl + 'users/update', user, { headers: this.headers })
       .map((res: Response) => res.json()).catch(this.handleError);
+  }
+
+  deleteUser(id){
+    return this.http.delete(this.nodeUrl + 'users/delete/' + id, { headers: this.headers})
+      .map( res => res.json());
   }
 
 

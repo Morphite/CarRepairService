@@ -198,6 +198,28 @@ router.put('/update', (req, res) => {
   });
 });
 
+//user delete (admin)
+router.delete('/delete/:id', (req, res) => {
+  User.deleteUser(req.params.id, (err, User) => {
+    if (err) {
+      res.json({ success: false, msg: err });
+    } else {
+      res.json({ success: true, msg: 'Заказ успешно удален' });
+    }
+  })
+});
+
+
+router.post('/deleteevent/:id', (req, res) => {
+  event.deleteEvent(req.params.id, (err, event) => {
+    if (err) {
+      res.json({ success: false, msg: err });
+    } else {
+      res.json({ success: true, msg: 'Заказ успешно удален' });
+    }
+  });
+});
+
 
 //Change password
 router.post('/password', passport.authenticate('jwt', {

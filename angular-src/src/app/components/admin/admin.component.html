@@ -12,7 +12,6 @@
     </div>
   </form>
 
-
   <div class="form-horizontal right" id="formSearch">
     <h4>Поиск событий по времени</h4>
     <div class="form-group">
@@ -52,14 +51,6 @@
         </div>
       </div>
       <div class="col-md-4 fixed">
-        <div class="form-group" [ngClass]="{'has-error': addUserForm.get('address').invalid && addUserForm.get('address').touched}">
-          <label class="col-lg-2 control-label">Адрес:</label>
-          <input type="text" id="inputAdd" name="Address" class="form-control form" formControlName="address" />
-        </div>
-        <div class="form-group" [ngClass]="{'has-error': addUserForm.get('area').invalid && addUserForm.get('area').touched}">
-          <label class="col-lg-2 control-label">Индекс:</label>
-          <input type="text" id="inputAdd" name="Area" text="" class="form-control form" formControlName="area" />
-        </div>
         <div class="form-group" [ngClass]="{'has-error': addUserForm.get('city').invalid && addUserForm.get('city').touched}">
           <label class="col-lg-2 control-label">Город:</label>
           <input type="text" id="inputAdd" name="City" text="" class="form-control form" formControlName="city" />
@@ -110,14 +101,6 @@
       </div>
       <div class="col-md-4 fixed">
         <div class="form-group">
-          <label class="col-lg-2 control-label">Адрес:</label>
-          <input type="text" [(ngModel)]="selectedUser.address" id="inputAddress" name="Address" placeholder="{{selectedUser.address}}" text="" class="form-control form" />
-        </div>
-        <div class="form-group">
-          <label class="col-lg-2 control-label">Индекс:</label>
-          <input type="text" [(ngModel)]="selectedUser.area" id="inputArea" name="Area" placeholder="{{selectedUser.area}}" text="" class="form-control form" />
-        </div>
-        <div class="form-group">
           <label class="col-lg-2 control-label">Город:</label>
           <input type="text" [(ngModel)]="selectedUser.city" id="inputFirstname" name="City" placeholder="{{selectedUser.city}}" text="" class="form-control form" />
         </div>
@@ -130,6 +113,7 @@
   </div>
   <button type="reset" (click)="selectedUser = null; getConfirms()" class="btn btn-default btn-xs">Отменить</button>
   <button type="submit" class="btn btn-primary btn-xs">Сохранить</button>
+  <button type="submit" (click)="deleteUser()" class="btn btn-default btn-default">Удалить</button>
 </form>
 
 
@@ -145,8 +129,6 @@
         <th>Фамилия</th>
         <th>Почта</th>
         <th>Телефон</th>
-        <th>Адрес</th>
-        <th>Индекс</th>
         <th>Город</th>
         <th>Доп. инфо</th>
       </tr>
@@ -158,8 +140,6 @@
         <td class="desc">{{user.lastname}}</td>
         <td class="desc">{{user.email}}</td>
         <td class="desc">{{user.phone}}</td>
-        <td class="desc">{{user.address}}</td>
-        <td class="desc">{{user.area}}</td>
         <td class="desc">{{user.city}}</td>
         <td class="desc">{{user.notes}}</td>
       </tr>
