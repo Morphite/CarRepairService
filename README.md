@@ -1,4 +1,4 @@
-# courseProject
-NodeJS, Angular, Express
+# CarRepairSerivice
+Web-app which allows clients to make revervations in repair services by dates
 
-In process;)
+Made with usage of NodeJS, Angular, Express
